@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react'
 import fetchData from '../api/fetchData';
+import ChartView from '../components/ChartView';
 
 const Dashboard = () => {
   const [apiData, setApiData] = useState([]);
@@ -18,15 +19,9 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h1 className='text-container text-2xl font-bold my-4' >NASA NEO Data Visualizer!</h1>
+      <h1 className='text-container text-2xl font-bold my-4 text-sm' >NASA NEO Data Visualizer!</h1>
 
-        {
-          apiData?.near_earth_objects?.map((item, ind) => (
-            <ul key={ind} className='text-black' >
-              <li>{item.name}</li>
-            </ul>
-          ))
-        }
+        <ChartView data={apiData} />
    
     </div>
   )
