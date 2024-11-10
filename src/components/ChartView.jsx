@@ -1,6 +1,11 @@
 import { Chart } from 'react-google-charts';
 
 const ChartView = ({ data }) => {
+
+  if (!data?.length) {
+    return <h1>No Data to Display</h1>
+  }
+
   const chartData = [
     ["NEO", "Min Diameter", "Max Diameter"],
     ...data.map(item => [
