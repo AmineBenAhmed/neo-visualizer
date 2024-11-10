@@ -1,8 +1,10 @@
+import Dashboard from "./views/Dashboard"
+
 function App() {
 
   return (
       <div className="lg:font-bold" >
-        dashboard vew
+        <Dashboard />
       </div>
   )
 }
