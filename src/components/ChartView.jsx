@@ -18,13 +18,15 @@ const ChartView = ({ data }) => {
   }
 
   return (
-    <Chart
+    <div className='lg:w-[80%] md:w-[90%] sm:w-[100%]' >
+      <Chart
       chartType='BarChart'
       width="100%"
       height="600px"
       data={chartData}
       options={options}
     />
+    </div>
   )
 }
 
