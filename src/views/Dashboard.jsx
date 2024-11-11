@@ -50,7 +50,7 @@ const Dashboard = () => {
         >
           {view === 'table' ? 'Chart view' : 'Table View'}
         </button>
-        <DownloadCSV data={filteredData} fileName='NEOData'/>
+        <DownloadCSV data={filteredData} fileName={selectedObject}/>
      </div>
 
         {view === 'chart' ? <ChartView data={filteredData} /> : <TableView data={filteredData} />}
